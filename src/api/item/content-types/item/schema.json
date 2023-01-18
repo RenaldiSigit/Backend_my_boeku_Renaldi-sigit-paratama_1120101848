@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "detail": {
+      "type": "text",
+      "required": false
+    },
+    "gambar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "harga": {
+      "type": "dynamiczone",
+      "components": [
+        "harga.harga"
+      ]
+    },
+    "kategoris": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kategori.kategori",
+      "mappedBy": "item"
+    },
+    "deskripsi": {
+      "type": "richtext"
+    }
+  }
+}

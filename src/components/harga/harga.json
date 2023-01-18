@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_harga_hargas",
+  "info": {
+    "displayName": "Harga"
+  },
+  "options": {},
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}
